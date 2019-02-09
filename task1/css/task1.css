@@ -1,0 +1,51 @@
+body {
+    /* 清除默认边距 */
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 定义父级盒子的属性 */
+
+.wrap {
+    padding: 1.1vw 0 0 1.1vw;
+    width: 100%;
+}
+
+
+/* 父级盒子清除浮动 */
+
+.clearfix:after {
+    content: ".";
+    /* 块级，独占一行 */
+    display: block;
+    height: 0;
+    /*溢出隐藏*/
+    visibility: hidden;
+    /* 前后都清除浮动 */
+    clear: both;
+}
+
+
+/* 子级盒子布局 */
+
+.wrap div {
+    /* 浮动的、绝对定位的盒子不会与任何其他盒子的margin合并(原因：它们是流外块级盒） */
+    float: left;
+    /* 子级盒子外边距 */
+    margin: 1.1vw;
+    /* 子级盒子尺寸，使用了视口单位 */
+    width: 30vw;
+    height: 30vw;
+    /* 背景色 */
+    background-color: #FEA500;
+    /* 边框圆角 */
+    border-radius: 2vw;
+}
+
+
+/* 伪类：鼠标移入时会变色 */
+
+.wrap div:hover {
+    background-color: #C5C166;
+}
