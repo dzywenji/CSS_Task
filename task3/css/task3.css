@@ -1,0 +1,123 @@
+/* 清除浏览器默认样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 根元素字体大小设置为10px，即1rem */
+    font-size: 10px;
+    /* 盒子模型使用border-box */
+    box-sizing: border-box;
+}
+
+body {
+    /* 背景色 */
+    background-color: #68CDD5;
+    /* 最小宽度 */
+    min-width: 320px;
+}
+
+
+/* 头部部分：一个返回按钮 */
+
+header div button {
+    /* 添加按钮图片 */
+    margin: 1rem 0 0 2rem;
+    width: 35px;
+    height: 35px;
+    background: url(../images/task3_r2_c2.gif) no-repeat;
+    background-size: 35px auto;
+    border: none;
+}
+
+button:focus {
+    /* 清除按钮的默认样式 */
+    outline: 0;
+}
+
+
+/* 主体部分：logo背景图片 + 一段文字 */
+
+main .logo {
+    /* 插入logo背景图片 */
+    height: 30vh;
+    /* 图片路径，不重复 */
+    background: url(../images/task3_r4_c5.gif) no-repeat;
+    /* 图片尺寸 */
+    background-size: 115px auto;
+    /* 图片位置 */
+    background-position: 50% 45%;
+}
+
+main article {
+    /* 让文字盒子居中 */
+    margin: 0 auto;
+    width: 70%;
+    height: 26vh;
+}
+
+main p,
+footer p {
+    /* 定义页面中p元素中的文字样式 */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: .5px;
+    color: #FFFFFF;
+}
+
+
+/* 底部：左右两个按钮 */
+
+footer .btn-group {
+    /* 底部盒子居中 */
+    margin: 0 auto;
+    width: 70%;
+    height: 25vh;
+}
+
+.btn-group button {
+    /* button元素需要显式设置为块级元素才能在父级盒子居中 */
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.btn-group .btn-left {
+    /* 左侧按钮左浮动 */
+    float: left;
+}
+
+.btn-group .btn-right {
+    /* 右侧按钮右浮动 */
+    float: right;
+}
+
+.clearfix:after {
+    /* 清除按钮盒子的浮动 */
+    content: ".";
+    /* 块级，独占一行 */
+    display: block;
+    height: 0;
+    /*溢出隐藏*/
+    visibility: hidden;
+    /* 前后都清除浮动 */
+    clear: both;
+}
+
+.btn-group .btn-left button {
+    background: url(../images/task3_r6_c4.png) no-repeat;
+    background-size: 50px auto;
+    background-position: 50% 50%;
+}
+
+.btn-group .btn-right button {
+    background: url(../images/task3_r6_c8.gif) no-repeat;
+    background-size: 50px auto;
+    background-position: 50% 50%;
+}
+
+.btn-group p {
+    /* 底部p元素与按钮的距离 */
+    margin-top: 1rem;
+}
