@@ -1,0 +1,133 @@
+/* 清除浏览器默认样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 根元素字体大小设置为10px，即1rem */
+    font-size: 10px;
+    background-color: #eff0f4;
+    /* 盒子模型使用border-box */
+    box-sizing: border-box;
+    color: #FFF;
+}
+
+body {
+    min-width: 320px;
+}
+
+
+/* 头部部分：登录标题、关闭按钮、注册链接 */
+
+header {
+    display: flex;
+    /* 对头部子元素的布局 */
+    justify-content: space-between;
+    /* 头部的子元素垂直居中 */
+    align-items: center;
+    height: 68px;
+    background-color: #5fc0cd;
+}
+
+header button,
+header a {
+    display: block;
+    margin: 0 1rem 0 1rem;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    background-color: #5fc0cd;
+    /* 清除注册链接默认样式 */
+    text-decoration: none;
+}
+
+button:focus {
+    /* 清除按钮的默认焦点样式 */
+    outline: 0;
+}
+
+header span {
+    font-size: 2rem;
+    background-color: #5fc0cd;
+}
+
+
+/* 主体部分：登录手机号输入框、登陆密码输入框、登陆按钮 */
+
+main form {
+    display: flex;
+    flex-direction: column;
+}
+
+main form div:nth-child(1) {
+    margin-top: 16px;
+    margin-bottom: 14px;
+}
+
+main form div {
+    /* 使用flex布局的作用是让该盒子的input元素在交叉轴居中对齐 */
+    display: flex;
+    /* 使用相对定位是添加before伪元素使用绝对定位放置背景图标 */
+    position: relative;
+    height: 60px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+main form div::before {
+    /* 给input控件盒子插入伪元素放置背景图标的盒子 */
+    position: absolute;
+    top: 16px;
+    left: 19px;
+    display: block;
+    content: '';
+    width: 18px;
+    height: 28px;
+}
+
+main form .login-box::before {
+    background: url(../images/login.png) no-repeat;
+    background-size: 18px auto;
+}
+
+main form .pwd-box::before {
+    background: url(../images/pwd.png) no-repeat;
+    background-size: 18px auto;
+}
+
+main input {
+    /* 让input控件在父级元素在交叉轴居中 */
+    align-self: center;
+    margin-left: 55px;
+    padding-left: 17px;
+    /* 占据整个父级盒子，会自动伸缩 */
+    width: 100%;
+    height: 32px;
+    font-size: 1.6rem;
+    color: black;
+    background-color: #ffffff;
+    border: none;
+    border-left: 4px solid #eff0f4;
+}
+
+main input:focus {
+    /* 清除input控件的默认焦点样式 */
+    outline: none;
+}
+
+main button {
+    margin-top: 42px;
+    height: 60px;
+    background-color: #5fc0cd;
+    border: none;
+    font-size: 2rem;
+}
+
+
+/* 底部部分：忘记密码的链接 */
+
+footer a {
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color: #5fc0cd;
+}
