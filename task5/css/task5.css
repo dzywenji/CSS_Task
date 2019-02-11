@@ -188,6 +188,10 @@ main .skill-info .main div:nth-child(1) div:nth-child(2) {
     margin-left: 70px;
 }
 
+main .skill-info .main div:nth-child(4) div:nth-child(3) {
+    color: #e26163;
+}
+
 main .skill-info .main>div:nth-child(5) {
     /* 设置最小高度，让其随内容自适应 */
     height: auto;
