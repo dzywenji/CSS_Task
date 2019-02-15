@@ -1,0 +1,298 @@
+/* 清除浏览器默认样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 盒子模型使用border-box */
+    box-sizing: border-box;
+}
+
+html {
+    /* 根元素字体大小设置为100px，即0.1rem=10px */
+    font-size: 625%;
+}
+
+body {
+    min-width: 320px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    background-color: #ffffff;
+}
+
+
+/* 头部部分：找雇主、找护工两个按钮，地点按钮。在视口固定
+让找雇主、找护工两个按钮居中，地点按钮靠右 */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header .btn-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #5fc0cd;
+}
+
+.header button {
+    height: 45px;
+    width: 23%;
+    border: none;
+    border-radius: 5px;
+    font-size: .18rem;
+}
+
+.header button:focus {
+    /* 清除焦点默认样式 */
+    outline: none;
+}
+
+.header #employers {
+    background-color: #55a8b3;
+    color: #ffffff;
+}
+
+.header #carers {
+    /* 让两个按钮有重叠的感觉，可以用js控制 */
+    margin-left: -5px;
+    background-color: #ffffff;
+    color: #5fc0cd;
+}
+
+.header #location-img {
+    position: absolute;
+    right: 15px;
+    width: 40px;
+    background: #5fc0cd url(../images/location-img.png) no-repeat;
+    background-size: 24px auto;
+    background-position: 15px 10px;
+}
+
+
+/* 主体部分：头部是三个下拉列表，主要内容是要包含的n项 */
+
+main {
+    font-size: .15rem;
+    margin-top: .6rem;
+    margin-bottom: 3.85rem;
+}
+
+main .select-list {
+    display: flex;
+    border-bottom: 1px solid #F3F3F3;
+}
+
+main .select-list .nav {
+    position: relative;
+    flex: 1;
+}
+
+main .select-list .nav:nth-child(2) {
+    border-left: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+}
+
+main .select-list .nav a {
+    position: relative;
+    display: block;
+    /* font-size: .15rem; */
+    line-height: 3;
+    text-align: center;
+    text-decoration: none;
+    color: #999999;
+}
+
+main .select-list .nav a span {
+    position: absolute;
+    top: 0.19rem;
+    right: 0.14rem;
+    border-left: .05rem solid transparent;
+    border-right: .05rem solid transparent;
+    border-top: .05rem solid #999999;
+}
+
+main .select-list .nav .plat {
+    /* 脱离文档流 */
+    position: absolute;
+    display: none;
+    margin-top: 1px;
+    width: 100%;
+    list-style: none;
+    /* 不设置时默认transparent */
+    background-color: #ffffff;
+    box-shadow: 0 .16rem .32rem 0 #999999;
+    z-index: 1;
+}
+
+main .select-list .nav:hover .plat {
+    display: block;
+}
+
+main .select-list .nav .plat li:hover {
+    background-color: #5fc0cd;
+}
+
+main .items {
+    height: 500px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+main .items a {
+    text-decoration: none;
+}
+
+main .items .item {
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid #f8f8f8;
+    background-color: #ffffff;
+    margin-bottom: 1px;
+    padding: .1rem;
+}
+
+main .items .item .service {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .items .item .service .service-box .service-date-fees {
+    display: flex;
+    justify-content: space-between;
+    margin: .1rem 0;
+}
+
+main .items .item .service .service-box .service-date-fees .service-date {
+    color: #3e3e3e;
+    font-weight: 600;
+}
+
+main .items .item .service .service-box .service-date-fees .service-fees {
+    color: #d74d2d;
+    font-weight: 600;
+}
+
+main .items .item .service .arrow {
+    position: absolute;
+    bottom: .13rem;
+    right: .05rem;
+    width: .13rem;
+    height: .13rem;
+    border-top: 2px solid #5fc0cd;
+    border-right: 2px solid #5fc0cd;
+    /* 转移角度，使其看起来像箭头 */
+    transform: rotate(45deg);
+}
+
+main .items .item .service .service-box,
+main .items .item .location {
+    width: 86%;
+    margin-left: .25rem;
+}
+
+main .items .item span,
+main .items .item .location {
+    color: #999999;
+}
+
+main .items .item a {
+    position: relative;
+}
+
+main .items .item span::before {
+    /* 添加伪元素块，用于添加背景图片 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 24px;
+    height: 24px;
+}
+
+main .items .item .service .service-box span::before {
+    background: url(../images/calendar.png) no-repeat;
+    background-position: 4px 2px;
+    background-size: 15px auto;
+}
+
+main .items .item a span::before {
+    background: url(../images/location2.png) no-repeat;
+    background-position: 5px 2px;
+    background-size: 12px auto;
+}
+
+
+/* 底部部分：首页按钮，编辑按钮，我的按钮，都是链接跳转。在视口固定 */
+
+footer {
+    /* 在视口固定该盒子 */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    font-size: .1rem;
+    background-color: #f9fafc;
+    /* 固定盒子需定义层级，总是显示在最上面 */
+    z-index: 100;
+}
+
+footer .wrap {
+    display: flex;
+    /* 子元素在主轴两端对齐 */
+    justify-content: space-between;
+    /* 子元素交叉轴居中 */
+    align-items: center;
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+footer .wrap div {
+    position: relative;
+    width: .55rem;
+    height: .55rem;
+}
+
+footer .wrap div span {
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
+    /* 使用margin与transform属性配合，让该元素在父元素水平居中 */
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer .wrap .home {
+    background: url(../images/house-btn.png) no-repeat;
+    background-position: 52% 9%;
+    background-size: .26rem auto;
+    color: #5ec0cb;
+}
+
+footer .wrap .mine {
+    background: url(../images/mine.png) no-repeat;
+    background-position: 52% 9%;
+    background-size: .26rem auto;
+    color: #adadad;
+}
+
+footer .wrap button {
+    width: .55rem;
+    height: .55rem;
+    border: none;
+    border-radius: .3rem;
+    background: #5ec0ce url(../images/Write.png) no-repeat;
+    background-position: 57% 45%;
+    background-size: .26rem auto;
+}
+
+footer .wrap button:focus {
+    /* 去除按钮默认焦点样式 */
+    outline: 0;
+}

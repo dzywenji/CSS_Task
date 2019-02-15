@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/task6.css">
+    <title>任务6:护工列表页——一个最常见的移动端页面，需要使用bootstrap</title>
+</head>
+
+<body>
+    <!-- 头部部分：找雇主、找护工两个按钮，地点按钮。在视口固定 -->
+    <header class="header">
+        <div class="btn-group">
+            <button id="employers">找雇主</button>
+            <button id="carers">找护工</button>
+            <button id="location-img">&#160;</button>
+        </div>
+    </header>
+    <!-- 主体部分：头部是三个下拉列表，主要内容是要包含的n项 -->
+    <main class="main">
+        <!-- 下拉列表：div.select-list>(div.nav>(a>span)+(ul.plat>li*3)*3)*3 -->
+        <div class="select-list">
+            <div class="nav">
+                <a href="#">所在地<span class="triangle"></span></a>
+                <ul class="plat">
+                    <li><a href="#">北京</a></li>
+                    <li><a href="#">通州</a></li>
+                    <li><a href="#">果园</a></li>
+                </ul>
+            </div>
+            <div class="nav">
+                <a href="#">食宿<span></span></a>
+                <ul class="plat">
+                    <li><a href="#">case1</a></li>
+                    <li><a href="#">case2</a></li>
+                    <li><a href="#">case3</a></li>
+                </ul>
+            </div>
+            <div class="nav">
+                <a href="#">病人情况<span></span></a>
+                <ul class="plat">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 每项包含服务日期的标题，具体时间，收费标准，和地点信息。每项都可以跳转到详细页面> -->
+        <ul class="items">
+            <li class="item">
+                <a href="#">
+                    <div class="service">
+                        <div class="service-box">
+                            <span>服务日期</span>
+                            <div class="service-date-fees">
+                                <p class="service-date">2018-7-26 至 2018-7-29</p>
+                                <p class="service-fees">25元/小时</p>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                    <span class="location">北京·通州·果园</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <div class="service">
+                        <div class="service-box">
+                            <span>服务日期</span>
+                            <div class="service-date-fees">
+                                <p class="service-date">2018-7-26 至 2018-7-29</p>
+                                <p class="service-fees">25元/小时</p>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                    <span class="location">北京·通州·果园</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <div class="service">
+                        <div class="service-box">
+                            <span>服务日期</span>
+                            <div class="service-date-fees">
+                                <p class="service-date">2018-7-26 至 2018-7-29</p>
+                                <p class="service-fees">25元/小时</p>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                    <span class="location">北京·通州·果园</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <div class="service">
+                        <div class="service-box">
+                            <span>服务日期</span>
+                            <div class="service-date-fees">
+                                <p class="service-date">2018-7-26 至 2018-7-29</p>
+                                <p class="service-fees">25元/小时</p>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                    <span class="location">北京·通州·果园</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <div class="service">
+                        <div class="service-box">
+                            <span>服务日期</span>
+                            <div class="service-date-fees">
+                                <p class="service-date">2018-7-26 至 2018-7-29</p>
+                                <p class="service-fees">25元/小时</p>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                    <span class="location">北京·通州·果园</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <div class="service">
+                        <div class="service-box">
+                            <span>服务日期</span>
+                            <div class="service-date-fees">
+                                <p class="service-date">2018-7-26 至 2018-7-29</p>
+                                <p class="service-fees">25元/小时</p>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                    <span class="location">北京·通州·果园</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <div class="service">
+                        <div class="service-box">
+                            <span>服务日期</span>
+                            <div class="service-date-fees">
+                                <p class="service-date">2018-7-26 至 2018-7-29</p>
+                                <p class="service-fees">25元/小时</p>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                    <span class="location">北京·通州·果园</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#">
+                    <div class="service">
+                        <div class="service-box">
+                            <span>服务日期</span>
+                            <div class="service-date-fees">
+                                <p class="service-date">2018-7-26 至 2018-7-29</p>
+                                <p class="service-fees">25元/小时</p>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                    <span class="location">北京·通州·果园</span>
+                </a>
+            </li>
+    </main>
+
+
+    <!-- 底部部分：首页按钮，编辑按钮，我的按钮，都是链接跳转。在视口固定 -->
+    <footer>
+        <div class="wrap">
+            <a href="#">
+                <div class="home"><span>首页</span></div>
+            </a>
+            <button id="edit"></button>
+            <a href="#">
+                <div class="mine"><span>我的</span></div>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/task6.js"></script>
+</body>
+
+</html>
